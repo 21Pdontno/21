@@ -24,7 +24,7 @@ export default function Project() {
   return (
     <motion.div
       initial={{ backgroundColor: 'transparent' }}
-      animate={{ backgroundColor: project.color }}
+      animate={{ backgroundColor: '#F5F5F5' }}
       exit={{ backgroundColor: 'transparent', transition: { duration: 0.8 } }}
       transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
       className="fixed inset-0 w-full h-full overflow-y-auto z-50"
@@ -109,7 +109,7 @@ export default function Project() {
       </motion.div>
 
       {/* Additional Images (Scroll triggered) */}
-      <div className="max-w-7xl mx-auto px-8 pb-32 space-y-32">
+      <div className="max-w-4xl mx-auto px-8 pb-32 space-y-24">
         {[1, 2, 3].map((i) => (
           <motion.div
             key={i}
@@ -117,10 +117,10 @@ export default function Project() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-            className={`w-full aspect-[16/9] bg-gray-200 overflow-hidden ${i % 2 === 0 ? 'md:w-3/4 ml-auto' : 'md:w-3/4'}`}
+            className="w-full aspect-[9/21] md:aspect-[1/2] bg-gray-200 overflow-hidden shadow-sm"
           >
             <img 
-              src={`https://picsum.photos/seed/${project.id}-${i}/1600/900`} 
+              src={`https://picsum.photos/seed/${project.id}-${i}/800/1600`} 
               alt="Project detail" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

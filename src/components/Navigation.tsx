@@ -50,7 +50,7 @@ export default function Navigation() {
               animate={{ scaleY: 1, opacity: 1 }}
               exit={{ scaleY: 0, opacity: 0 }}
               transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-              className="fixed left-1/2 top-0 -translate-x-1/2 w-64 h-full bg-[#EAE8E3] z-50 flex flex-col items-center justify-center origin-center shadow-2xl"
+              className="fixed left-0 md:left-1/2 top-0 md:-translate-x-1/2 w-64 h-full bg-[#EAE8E3] z-50 flex flex-col items-center justify-center origin-center shadow-2xl"
             >
               <div className="flex flex-col items-center gap-8 text-black font-sans text-sm tracking-widest uppercase font-medium">
                 <div className="text-black/40 mb-4 text-xs">Categories</div>
@@ -79,7 +79,7 @@ export default function Navigation() {
       <AnimatePresence>
         {(!showCategories || location.pathname !== '/') && (
           <motion.nav 
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 mix-blend-difference flex items-center"
+            className="fixed left-2 md:left-1/2 top-1/2 -translate-y-1/2 md:-translate-x-1/2 z-30 mix-blend-difference flex items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
