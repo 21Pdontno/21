@@ -71,8 +71,7 @@ export default function Home() {
     setTimeout(() => {
       const newProjects = projects.map(p => ({
         ...p,
-        id: `${p.id}-${page}`,
-        title: `${p.title} ${page + 1}`
+        id: `${p.id}-${page}`
       }));
       
       setFilteredProjects(prev => {
