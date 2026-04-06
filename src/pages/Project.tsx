@@ -109,20 +109,20 @@ export default function Project() {
       </motion.div>
 
       {/* Additional Images (Scroll triggered) */}
-      <div className="max-w-4xl mx-auto px-8 pb-32 space-y-24">
+      <div className="max-w-7xl mx-auto px-8 pb-32 flex flex-col">
         {[1, 2, 3].map((i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-            className="w-full aspect-[9/21] md:aspect-[1/2] bg-gray-200 overflow-hidden shadow-sm"
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="w-full aspect-[9/21] md:aspect-[9/16] bg-gray-200 overflow-hidden"
           >
             <img 
-              src={`https://picsum.photos/seed/${project.id}-${i}/800/1600`} 
+              src={`https://picsum.photos/seed/${project.id}-${i}/1200/2133`} 
               alt="Project detail" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover block"
               referrerPolicy="no-referrer"
             />
           </motion.div>
