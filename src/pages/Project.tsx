@@ -117,12 +117,12 @@ export default function Project() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full aspect-[9/21] md:aspect-[9/16] bg-gray-200 overflow-hidden"
+            className="w-full bg-gray-200 overflow-hidden flex flex-col"
           >
             <img 
               src={`https://picsum.photos/seed/${project.id}-${i}/1200/2133`} 
               alt="Project detail" 
-              className="w-full h-full object-cover block"
+              className="w-full h-auto block"
               referrerPolicy="no-referrer"
             />
           </motion.div>
