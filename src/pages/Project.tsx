@@ -110,7 +110,7 @@ export default function Project() {
 
       {/* Additional Images (Scroll triggered) */}
       <div className="max-w-7xl mx-auto px-8 pb-32 flex flex-col">
-        {[1, 2, 3].map((i) => (
+        {project.detailImages?.map((src, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0 }}
@@ -120,7 +120,7 @@ export default function Project() {
             className="w-full bg-gray-200 overflow-hidden flex flex-col"
           >
             <img 
-              src={`https://picsum.photos/seed/${project.id}-${i}/2500/4444`} 
+              src={src} 
               alt="Project detail" 
               className="w-full h-auto block"
               referrerPolicy="no-referrer"
