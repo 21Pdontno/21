@@ -50,7 +50,7 @@ export default function About() {
         <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-24 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
           <motion.h1
             layoutId="about-title"
-            className="text-5xl md:text-8xl font-serif text-white mb-4"
+            className="text-5xl md:text-8xl font-sans text-white mb-4"
             transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
           >
             About Me
@@ -78,20 +78,20 @@ export default function About() {
           <div className="lg:col-span-7 space-y-16">
             <section>
               <h3 className="text-sm font-sans uppercase tracking-widest text-white/50 mb-8">Biography</h3>
-              <p className="font-serif text-2xl md:text-4xl leading-relaxed mb-8">
+              <p className="font-sans text-2xl md:text-4xl leading-relaxed mb-8">
                 I am a multidisciplinary designer and art director, focusing on the intersection of brand identity, digital experiences, and emerging technologies.
               </p>
-              <p className="font-serif text-xl md:text-2xl leading-relaxed text-white/70 mb-8">
+              <p className="font-sans text-xl md:text-2xl leading-relaxed text-white/70 mb-8">
                 With over a decade of experience in the creative industry, I've helped both startups and global enterprises articulate their vision through thoughtful, systematic design. My approach combines rigorous strategic thinking with meticulous craft, ensuring that every touchpoint not only looks beautiful but serves a clear purpose.
               </p>
-              <p className="font-serif text-xl md:text-2xl leading-relaxed text-white/70">
+              <p className="font-sans text-xl md:text-2xl leading-relaxed text-white/70">
                 I believe that great design is invisible. It's not about adding more elements, but about removing the unnecessary until only the essential remains. Whether I'm designing a complex digital product or a holistic brand identity, my goal is to create work that feels inevitable.
               </p>
             </section>
 
             <section>
               <h3 className="text-sm font-sans uppercase tracking-widest text-white/50 mb-8">Capabilities</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 font-serif text-xl md:text-2xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 font-sans text-xl md:text-2xl">
                 <div>
                   <h4 className="text-white mb-4">Brand Strategy</h4>
                   <ul className="text-white/60 space-y-2 text-lg">
@@ -136,7 +136,7 @@ export default function About() {
           <div className="lg:col-span-5 space-y-16">
             <section>
               <h3 className="text-sm font-sans uppercase tracking-widest text-white/50 mb-8">Experience</h3>
-              <ul className="space-y-8 font-serif text-xl md:text-2xl">
+              <ul className="space-y-8 font-sans text-xl md:text-2xl">
                 <li className="border-b border-white/10 pb-8">
                   <div className="flex justify-between items-baseline mb-2">
                     <span className="text-white">Senior Art Director</span>
@@ -170,7 +170,7 @@ export default function About() {
 
             <section>
               <h3 className="text-sm font-sans uppercase tracking-widest text-white/50 mb-8">Selected Awards</h3>
-              <ul className="space-y-6 font-serif text-lg md:text-xl text-white/80">
+              <ul className="space-y-6 font-sans text-lg md:text-xl text-white/80">
                 <li className="flex justify-between items-center border-b border-white/10 pb-6">
                   <span>Awwwards Site of the Month</span>
                   <span className="font-sans text-sm text-white/50">2025</span>
@@ -192,7 +192,7 @@ export default function About() {
 
             <section>
               <h3 className="text-sm font-sans uppercase tracking-widest text-white/50 mb-8">Contact</h3>
-              <div className="space-y-4 font-serif text-xl md:text-2xl">
+              <div className="space-y-4 font-sans text-xl md:text-2xl">
                 <a href="mailto:hello@example.com" className="block hover:text-white/50 transition-colors">hello@example.com</a>
                 <a href="#" className="block hover:text-white/50 transition-colors">LinkedIn</a>
                 <a href="#" className="block hover:text-white/50 transition-colors">Behance</a>

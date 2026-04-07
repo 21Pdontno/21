@@ -59,7 +59,7 @@ export default function Project() {
         <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-24 bg-gradient-to-t from-black/60 to-transparent">
           <motion.h1
             layoutId={`title-${project.id}`}
-            className="text-5xl md:text-8xl font-serif text-white mb-4"
+            className="text-5xl md:text-8xl font-sans text-white mb-4"
             transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
           >
             {project.title}
@@ -97,13 +97,13 @@ export default function Project() {
           </div>
         </div>
         
-        <div className="md:col-span-8 font-serif text-2xl md:text-4xl leading-relaxed text-black/90">
+        <div className="md:col-span-8 font-sans text-2xl md:text-4xl leading-relaxed text-black/90">
           <p>
             We approached this project with a minimalist avant-garde philosophy, aiming to create a high-end commercial feel combined with an immersive digital experience. The ordered grid minimalism serves as the underlying logic for the entire visual system.
           </p>
           <br />
           <p>
-            By utilizing neutral color containers, we ensured that the brand's core visual identity remained the focal point, avoiding any conflict with superfluous color decorations. The typography relies on a clean sans-serif base, elevated by serif accents in the editorial sections.
+            By utilizing neutral color containers, we ensured that the brand's core visual identity remained the focal point, avoiding any conflict with superfluous color decorations. The typography relies on a clean sans-serif base, elevated by sans-serif accents in the editorial sections.
           </p>
         </div>
       </motion.div>
@@ -120,7 +120,7 @@ export default function Project() {
             className="w-full bg-gray-200 overflow-hidden flex flex-col"
           >
             <img 
-              src={`https://picsum.photos/seed/${project.id}-${i}/1200/2133`} 
+              src={`https://picsum.photos/seed/${project.id}-${i}/2500/4444`} 
               alt="Project detail" 
               className="w-full h-auto block"
               referrerPolicy="no-referrer"
