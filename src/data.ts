@@ -193,15 +193,15 @@ export const projects: Project[] = [
   },
   { 
     id: '15', 
-    title: 'Project Pi', 
+    title: '多动作换装视频工作流', 
     category: 'AIGC', 
-    image: 'https://picsum.photos/seed/p16/1600/2844', 
+    image: 'https://i.imgs.ovh/2026/04/08/ZHeJDh.png', 
     color: '#707070', 
     description: 'Sound design and audio engineering.',
     detailImages: [
-      'https://picsum.photos/seed/p16-1/2500/4444',
-      'https://picsum.photos/seed/p16-2/2500/4444',
-      'https://picsum.photos/seed/p16-3/2500/4444'
+      'https://i.imgs.ovh/2026/04/08/ZHeW2x.png',
+      'https://i.imgs.ovh/2026/04/08/ZHenXM.png',
+      'https://i.imgs.ovh/2026/04/08/ZHeQzL.png'
     ]
   },
   { 
