@@ -1,10 +1,18 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 export default function Cursor() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHoveringCard, setIsHoveringCard] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  // Use motion values instead of React state for better performance (no re-renders on mousemove)
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+
+  // Use a very tight spring for fast, responsive movement without lag
+  const springConfig = { damping: 40, stiffness: 1000, mass: 0.1 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -15,7 +23,8 @@ export default function Cursor() {
     window.addEventListener('resize', checkMobile);
 
     const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      cursorX.set(e.clientX);
+      cursorY.set(e.clientY);
     };
 
     const handleMouseOver = (e: MouseEvent) => {
@@ -37,18 +46,17 @@ export default function Cursor() {
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
     };
-  }, [isMobile]);
+  }, [isMobile, cursorX, cursorY]);
 
   if (isMobile) return null;
 
   return (
     <motion.div
       className={`custom-cursor ${isHoveringCard ? 'view-case' : ''}`}
-      animate={{
-        x: mousePosition.x,
-        y: mousePosition.y,
+      style={{
+        x: cursorXSpring,
+        y: cursorYSpring,
       }}
-      transition={{ type: 'spring', stiffness: 500, damping: 28, mass: 0.5 }}
     >
       <div className="custom-cursor-dot" />
     </motion.div>
