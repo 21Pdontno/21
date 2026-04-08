@@ -110,7 +110,7 @@ export default function Home() {
           className="text-2xl font-sans font-bold tracking-tighter pointer-events-auto cursor-pointer w-32"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          BIA.
+          ZHOU.
         </h1>
       </header>
 

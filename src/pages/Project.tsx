@@ -93,17 +93,17 @@ export default function Project() {
           </div>
           <div>
             <h3 className="text-black/50 mb-2">Year</h3>
-            <p className="font-medium">2026</p>
+            <p className="font-medium">{project.year}</p>
           </div>
         </div>
         
         <div className="md:col-span-8 font-sans text-2xl md:text-4xl leading-relaxed text-black/90">
           <p>
-            We approached this project with a minimalist avant-garde philosophy, aiming to create a high-end commercial feel combined with an immersive digital experience. The ordered grid minimalism serves as the underlying logic for the entire visual system.
+            {project.content1}
           </p>
           <br />
           <p>
-            By utilizing neutral color containers, we ensured that the brand's core visual identity remained the focal point, avoiding any conflict with superfluous color decorations. The typography relies on a clean sans-serif base, elevated by sans-serif accents in the editorial sections.
+            {project.content2}
           </p>
         </div>
       </motion.div>
