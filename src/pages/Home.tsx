@@ -3,6 +3,13 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { projects, Project } from '../data';
 
+// Helper function to optimize external images
+// Removed wsrv.nl proxy as it can be unstable in mainland China.
+// Relying on native browser lazy loading instead.
+const getOptimizedImage = (url: string, width: number = 800) => {
+  return url;
+};
+
 export default function Home() {
   const [searchParams] = useSearchParams();
   const activeCategory = searchParams.get('category') || 'All';
@@ -179,8 +186,10 @@ function ProjectCard({ project, index, onClick }: { key?: string | number; proje
       >
         <motion.div style={{ y }} className="absolute inset-0 w-full h-[120%] -top-[10%]">
           <img
-            src={project.image}
+            src={getOptimizedImage(project.image, 800)}
             alt={project.title}
+            loading={index > 3 ? "lazy" : "eager"}
+            decoding="async"
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             referrerPolicy="no-referrer"
           />

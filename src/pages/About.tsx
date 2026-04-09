@@ -2,6 +2,12 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+// Helper function to optimize external images
+// Removed wsrv.nl proxy as it can be unstable in mainland China.
+const getOptimizedImage = (url: string, width: number = 1600) => {
+  return url;
+};
+
 export default function About() {
   const navigate = useNavigate();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -40,7 +46,7 @@ export default function About() {
           transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
         >
           <img
-            src="https://i.imgs.ovh/2026/04/08/ZHuKpd.jpeg"
+            src={getOptimizedImage("https://i.imgs.ovh/2026/04/08/ZHuKpd.jpeg", 1600)}
             alt="Designer Profile"
             className="w-full h-full object-cover opacity-80"
             referrerPolicy="no-referrer"

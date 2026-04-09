@@ -3,6 +3,12 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../data';
 
+// Helper function to optimize external images
+// Removed wsrv.nl proxy as it can be unstable in mainland China.
+const getOptimizedImage = (url: string, width: number = 1600) => {
+  return url;
+};
+
 export default function Project() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -48,7 +54,7 @@ export default function Project() {
           transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
         >
           <img
-            src={project.image}
+            src={getOptimizedImage(project.image, 1600)}
             alt={project.title}
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -120,8 +126,10 @@ export default function Project() {
             className="w-full bg-gray-200 overflow-hidden flex flex-col"
           >
             <img 
-              src={src} 
+              src={getOptimizedImage(src, 1600)} 
               alt="Project detail" 
+              loading="lazy"
+              decoding="async"
               className="w-full h-auto block"
               referrerPolicy="no-referrer"
             />
